@@ -7,34 +7,31 @@ to hold the many different types of embedded development kits we use.
 We would like to have an easy way to connect and disconnect these development
 kits to a server via USB hubs (similar to quick swap HDDs or drives).
 
-
 ## Glossary
-- `mbh` (Modular Board Holder) - The overall project
-- `mc` (Modular Container) - The large box that interconnects
-- `bh` (Board Holder) - The flat slot that the board and usb will clip into
-- `ube` (USB Bunny Ears) - The spring mechanism to push the usb cable up
-- `uc` (USB Cap) - The usb specific cap that clips in over top of the usb casing
-- `cbc` (Corner Board Clip) - A clip that connects to bh that holds the corner of boards
-- `sbc` (Side Board Clip) - A clip that connects to bh that holds the side of boards
+- `bc_s` (Board Clip - Single) - A pcb board holder clip fitting a single position.
+- `bc_d` (Board Clip - Dual) - A pcb board holder clip fitting a two positions.
+- `bh` (Board Holder) - The flat slot that the board and usb will clip into.
+- `mbh` (Modular Board Holder) - The overall project.
+- `mc` (Modular Container) - The large box that interconnects.
+- `src` (Sliding Ratchet Clip) - Is a clip used to fasten the SRH to a specific position acting like the other size  of the zip tie.
+- `srh` (Sliding Ratchet Holder) - Holds the center of a USB cable in a position, it has ridges similar to a zip tie that can be used to adjust an axis.
+- `umh` (USB Modular Holder)
 
-## Misc
-The only thing that will need to be adapted is the `uc`, this will be adjusted
-by replacing parameters in the spreadsheet.
-The manufacturer name should be included in the namespace or just a number
-if manufacturer name is unavailable.
+- ~~`cbc` (Corner Board Clip) - A clip that connects to bh that holds the corner of boards~~
+- ~~`sbc` (Side Board Clip) - A clip that connects to bh that holds the side of boards~~
+- ~~`ube` (USB Bunny Ears) - The spring mechanism to push the usb cable up~~
+- ~~`uc` (USB Cap) - The usb specific cap that clips in over top of the usb casing~~
 
 ## Requirements
 
 Software version used to model this:
 ```
-FreeCAD_0.20.2-2022-12-27-conda-Linux-x86_64-py310.AppImage
+freecad-0.21.1
 ```
 
-USB cable
+Slicer for the 3D printing:
 ```
-Manufacturer: Stewart Connector
-Manufacturer Product Number: SC-2AMK001
-url: https://www.digikey.de/en/products/detail/stewart-connector/SC-2AMK001F/8544576
+prusaslicer-2.7.1
 ```
 
 Panel Mount USB connector
@@ -67,12 +64,13 @@ All the different pieces:
 
 ## Roadmap
 
-- Add more board clip variants to better fit possible boards.
 - Create a "service" where some basic parameters are entered and out pops an
-stl for those given parameters, eliminating the need for any setup or tuning.\
-- Try to make a more generic `uc` so everything is can be swapped.
-- Add a usb hub holder solution.
-- Refactor and improve the FreeCAD modelling.
+stl for those given parameters.
 - Automate releases to provide all the stl files in a reproducible way.
-- Allow for vendor independent USB chassis clip.
 - Add a place to label the `mc` for location
+- Add an open PCB
+    - 4x USB hub
+    - Bussed power
+    - Power control
+    - Indicator LEDs
+    - Bussed communications
