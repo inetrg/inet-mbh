@@ -4,6 +4,16 @@ Changelog
 Latest
 ======
 
+Version 1.0.1
+-------------
+
+Small change to make the board holders (bh) thinner as they interfered with
+some buttons on the large nucleo boards. They are a bit more flimsy but enough
+for the purpose and allows more overall height.
+
+- Both the bh and bh_long are the only things affected.
+- The stability_z size decreased from 1.6mm to 0.8mm
+
 Version 1.0.0
 -------------
 
